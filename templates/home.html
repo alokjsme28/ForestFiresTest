@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+</head>
+<body>
+    <div class="login">
+        <h1>FWI Prediction</h1>
+
+        <form action = "{{ url_for('predict_data')}}" method="post">
+            
+            <input type="text" name="RH" id="rh" required="required" placeholder="RH" /> <br /><br />
+            <input type="text" name="Temperature" id="temperature" required="required" placeholder="Temperature" /> <br /> <br />
+            <input type="text" name="Ws" id="ws" required="required" placeholder="Ws" /> <br /> <br />
+            <input type="text" name="Rain" id="rain" required="required" placeholder="Rain" /> <br /> <br />
+            <input type="text" name="FFMC" id="ffmc" required="required" placeholder="FFMC" /> <br /> <br />
+            <input type="text" name="DMC" id="dmc" required="required" placeholder="DMC" /> <br /> <br />
+            <input type="text" name="ISI" id="isi" required="required" placeholder="ISI" /> <br /> <br />
+            <input type="text" name="Classes" id="classes" required="required" placeholder="Classes" /> <br /> <br />
+            <input type="text" name="Region" id="region" required="required" placeholder="Region" /> <br /> <br />
+
+            <button type="submit" class = "btn btn-primary btn-block btn-large">Predict</button>
+
+        </form>
+
+        <h2>
+            The FWI Prediction is {{results}}
+        </h2>
+    </div>
+</body>
+</html>
